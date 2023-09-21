@@ -4,6 +4,16 @@ from jsonpath import jsonpath
 
 
 class TestApi:
+
+    def setup_method(self):
+        print("在执行用例之前进行初始化")
+    def teardown_method(self):
+        print("在执行用例之后结束")
+    def setup_class(self):
+        print("开始时只执行一次")
+    def teardown_class(self):
+        print("结尾时只执行一次")
+
     def test_01_api(self):
         print("输出成功01")
 
